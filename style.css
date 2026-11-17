@@ -1,0 +1,315 @@
+/* colours: soft white background #f4f6f1, dark text #12241b,
+   grey text #5c6b62, green accent #1f7a4d, line #d5dcd2 */
+
+/* ---------- basics ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f6f1;
+  color: #12241b;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* outline for people using the keyboard (Tab key) */
+a:focus-visible {
+  outline: 2px solid #1f7a4d;
+  outline-offset: 3px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- navigation ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #f4f6f1;
+  border-bottom: 1px solid #d5dcd2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  font-size: 15px;
+}
+
+nav ul a:hover {
+  color: #1f7a4d;
+}
+
+/* ---------- sections ---------- */
+section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  /* so the sticky nav bar does not cover the section title when a nav link is clicked */
+  scroll-margin-top: 60px;
+}
+
+/* small label above each section */
+h2 {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1f7a4d;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ---------- hero ---------- */
+#home {
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+
+/* photo and name side by side */
+.me {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.photo {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #1f7a4d;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.location {
+  color: #5c6b62;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+
+/* the green words in the headline */
+h1 span {
+  color: #1f7a4d;
+  font-style: italic;
+}
+
+.intro {
+  font-size: 19px;
+  color: #5c6b62;
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #12241b;
+  color: #f4f6f1;
+  padding: 12px 28px;
+  border-radius: 30px;
+}
+
+.button:hover {
+  background-color: #1f7a4d;
+}
+
+/* text link next to the button */
+.link {
+  margin-left: 20px;
+  border-bottom: 1px solid #12241b;
+}
+
+.link:hover {
+  color: #1f7a4d;
+  border-color: #1f7a4d;
+}
+
+/* ---------- boardroom / classroom boxes ---------- */
+.halves {
+  display: flex;
+  gap: 12px;
+  margin-top: 56px;
+}
+
+.half {
+  flex: 1;
+  padding: 24px;
+  border-radius: 16px;
+  font-size: 15px;
+}
+
+.half-label {
+  font-family: "Fraunces", serif;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+/* space above the second company */
+.gap {
+  margin-top: 12px;
+}
+
+.boardroom {
+  background-color: #12241b;
+  color: #f4f6f1;
+}
+
+.classroom {
+  background-color: #dcebd9;
+  color: #12241b;
+}
+
+/* ---------- about ---------- */
+#about p {
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+
+/* ---------- vision and goals ---------- */
+#vision .intro {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.goals-title {
+  margin-top: 32px;
+}
+
+.goals {
+  list-style: disc;
+  padding-left: 22px;
+}
+
+.goals li {
+  font-size: 19px;
+  padding: 14px 0 14px 8px;
+  border-top: 1px solid #d5dcd2;
+}
+
+/* the dots in green */
+.goals li::marker {
+  color: #1f7a4d;
+}
+
+/* ---------- experience, education, certifications ---------- */
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid #d5dcd2;
+}
+
+.item p {
+  color: #5c6b62;
+  font-size: 16px;
+}
+
+.dates {
+  flex-shrink: 0;
+}
+
+/* ---------- contact ---------- */
+.big {
+  font-family: "Fraunces", serif;
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.big a {
+  color: #1f7a4d;
+  text-decoration: underline;
+}
+
+.big a:hover {
+  color: #12241b;
+}
+
+/* ---------- footer ---------- */
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px;
+  border-top: 1px solid #d5dcd2;
+  color: #5c6b62;
+  font-size: 14px;
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  nav ul {
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  nav ul li:nth-child(3) {
+    display: none;
+  }
+
+  #home {
+    padding-top: 48px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .big {
+    font-size: 28px;
+  }
+
+  .halves {
+    flex-direction: column;
+  }
+
+  .item {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
